@@ -1,15 +1,297 @@
-/** IMPORTS **/
+/* IMPORTS */
+@import '../variables.scss';
+@import '../pc/homepage/homepage.scss';
+@import '../pc/property/property.scss';
 
 #pc-wrap {
   #top {
-    background: brown;
-  }
+    .navbar {
+      .navbar-main {
+        position: fixed; z-index: 99; display: flex; flex-direction: row; align-items: center; box-sizing: border-box; width: 100%; height: 87px; padding: 22px 0px; border-top: 1px solid rgba(255, 255, 255, 0.07);
 
-  .header {
-    background: rgb(186, 163, 163);
-  }
+        &.transparent {
+          background-color: #181a209e;
+        }
 
-  #footer {
-    background: rgb(28, 8, 51);
+        .container {
+          //app.css dan keldi
+          flex-direction: row; justify-content: space-between; align-items: center;
+
+          .logo-box {
+            img {
+              width: 150px; cursor: pointer;
+            }
+          }
+        }
+
+        .router-box {
+          position: relative; display: flex; flex-direction: row; justify-content: space-between; width: 617px;
+
+          div {
+            position: relative; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; color: #eeeeeeed; cursor: pointer;
+          }
+        }
+
+        .user-box {
+          display: flex; flex-direction: row; justify-content: flex-end; width: 270px;
+
+          .join-box {
+            display: flex; justify-content: center; align-items: center; width: 184px; height: 47px; border: 1px solid #ffffff; border-radius: 60px; cursor: pointer;
+
+            svg {
+              margin-right: 10px; color: #ffffff;
+            }
+
+            span {
+              font-family: $font; font-size: 14px; font-weight: 600; font-style: normal; line-height: normal; color: #ffffff;
+            }
+          }
+
+          .login-user {
+            img {
+              width: 42px; height: 42px; border-radius: 50%; object-fit: cover;
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+.header-main {
+  position: relative; width: 100%; height: 860px; background-image: url('/img/banner/header1.svg'); background-size: cover;
+
+  .container {
+    position: relative; flex-direction: column; align-items: center; margin-top: 20px;
+
+    .search-box {
+      position: relative; display: flex; flex-direction: row; justify-content: space-between; width: 1094px; height: 96px; padding: 16px 29px; border-radius: 12px; margin-top: 615px; background: rgba(255, 255, 255, 0.28);
+
+      .select-box {
+        display: flex; flex-direction: row; justify-content: space-between; width: 712px;
+
+        .box {
+          display: flex; flex-direction: row; flex-direction: row; justify-content: space-between; align-items: center; box-sizing: border-box; width: 213px; height: 56px; padding: 24px 22px; border-radius: 12px; background: rgba(255, 255, 255, 0.575); cursor: pointer;
+
+          &.on {
+            border: 1px solid #000; color: #181a20; background: #ffffff;
+          }
+
+          span {
+            font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #181a20;
+          }
+        }
+      }
+
+      .search-box-other {
+        display: flex; flex-direction: row; align-items: center;
+
+        .advanced-filter {
+          display: flex; flex-direction: row; align-items: center;
+
+          img {
+            width: 25px; height: 22px; margin-right: 10px; cursor: pointer;
+          }
+
+          span {
+            font-family: $font; font-size: 20px; font-weight: 600; font-style: normal; line-height: normal; color: #fff; cursor: pointer;
+          }
+        }
+
+        .search-btn {
+          display: flex; justify-content: center; align-items: center; width: 62px; height: 62px; border-radius: 55px; margin-left: 12px; background: #f17742; cursor: pointer;
+
+          svg {
+            width: 20px; height: 20px; color: #ffffff;
+          }
+        }
+      }
+
+      .filter-location {
+        position: absolute; top: 96px; right: 0px; z-index: 2; display: flex; visibility: hidden; flex-direction: row; flex-wrap: wrap; gap: 40px; box-sizing: border-box; width: 1094px; height: auto; min-height: 120px; padding: 40px 60px; border-radius: 12px; background: #ffffff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        &.on {
+          visibility: visible; background: #fffdfd; transition: 0.2s ease-out;
+        }
+
+        div {
+          display: flex; flex-direction: row; align-items: center; width: 295px;
+
+          img {
+            width: 122px; height: 85px; border-radius: 15px; cursor: pointer;
+          }
+
+          span {
+            margin-left: 22px; font-family: $font; font-size: 20px; font-weight: 400; font-style: normal; line-height: 26px; text-transform: capitalize; color: #181a20; cursor: pointer;
+          }
+
+          label {
+            line-height: 13px;
+          }
+        }
+      }
+
+      .filter-type {
+        position: absolute; top: 96px; right: 0px; z-index: 1; display: flex; visibility: hidden; flex-direction: row; justify-content: space-between; box-sizing: border-box; width: 1094px; height: auto; min-height: 120px; padding: 50px; border-radius: 12px; background: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        &.on {
+          visibility: visible; background: #fffdfd; transition: 0.2s ease-out;
+        }
+
+        div {
+          position: relative; width: 272px; height: 168px; border-radius: 15px; background-size: cover; cursor: pointer;
+
+          span {
+            position: absolute; top: 13px; right: 12px; padding: 1px 5px 5px 5px; border-radius: 2px 2px 0px 0px; font-family: $font; font-size: 20px; font-weight: 700; font-style: normal; line-height: 26px; text-transform: capitalize; background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+          }
+        }
+      }
+
+      .filter-rooms {
+        position: absolute; top: 96px; right: 0px; z-index: 1; display: flex; visibility: hidden; flex-direction: row; justify-content: space-between; align-items: center; box-sizing: border-box; width: 1094px; height: auto; min-height: 120px; padding: 10px 92px; border-radius: 12px; background: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        &.on {
+          visibility: visible; background: #fffdfd; transition: 0.2s ease-out;
+        }
+
+        span {
+          display: flex; align-items: center; padding: 10px 30px; border: 1px solid #fffdfd; font-family: $font; font-size: 20px; font-weight: 400; font-style: normal; line-height: 26px; color: #181a20; cursor: pointer;
+
+          &:hover {
+            border: 1px solid #b9b9b9; border-radius: 5px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-basic {
+  position: relative; display: flex; flex-direction: row; justify-content: center; width: 100%; height: 557px; background: black;
+
+  &.auth {
+    height: 300px;
+  }
+
+  .container {
+    margin-top: 175px;
+
+    strong {
+      font-family: $font; font-size: 48px; font-weight: 600; font-style: normal; line-height: normal; letter-spacing: 0.96px; text-transform: capitalize; color: #fff;
+    }
+
+    span {
+      font-family: $font; font-size: 24px; font-weight: 400; font-style: normal; line-height: 26px; color: #fff;
+    }
+  }
+}
+
+#footer {
+  position: relative; display: flex; flex-direction: row; width: 100%; height: auto; padding: 60px 0px 18px 0px; background: #181a20;
+
+  .footer-container {
+    width: 1300px; height: auto; margin: 0 auto;
+
+    .main {
+      display: flex; flex-direction: row; justify-content: space-between;
+
+      .left {
+        display: flex; flex-direction: column; justify-content: space-between; height: 360px;
+
+        .footer-box {
+          display: flex; flex-direction: column;
+
+          .logo {
+            width: 128px; height: 52px; cursor: pointer;
+          }
+        }
+
+        span {
+          font-family: $font; font-size: 14px; font-weight: 400; text-transform: capitalize; color: #bebdbd;
+        }
+
+        p {
+          font-family: $font; font-size: 15px; font-weight: 600; color: #fff;
+        }
+
+        .media-box {
+          margin-top: 12px; color: #929495;
+
+          svg {
+            margin-right: 22px; font-size: 32px; cursor: pointer;
+          }
+        }
+      }
+
+      /* ← left yopildi */
+
+      .right {
+        display: flex; flex-direction: column;
+
+        .top {
+          display: flex; flex-direction: column;
+
+          strong {
+            font-family: $font; font-size: 15px; font-weight: 600; text-transform: capitalize; color: #fff;
+          }
+
+          div {
+            display: flex; flex-direction: row; align-items: center; box-sizing: border-box; width: 667px; height: 70px; padding: 20px 30px; border-radius: 12px; margin-top: 20px; background: #212329;
+
+            input {
+              width: 85%; border: none; margin-right: 10px; font-family: $font; font-size: 14px; color: #fff; background: none; outline: none;
+            }
+
+            span {
+              font-family: $font; font-size: 15px; font-weight: 600; color: #fff; cursor: pointer;
+            }
+          }
+        }
+
+        /* ← top yopildi */
+
+        .bottom {
+          display: flex; flex-direction: row; justify-content: space-between; margin-top: 60px;
+
+          div {
+            display: flex; flex-direction: column;
+
+            strong {
+              margin-bottom: 3px; font-family: $font; font-size: 15px; font-weight: 600; text-transform: capitalize; color: #fff;
+            }
+
+            span {
+              margin-top: 25px; font-family: $font; font-size: 14px; color: #bebdbd; cursor: pointer;
+
+              &:hover {
+                color: #ffffff; text-decoration-line: underline;
+              }
+            }
+          }
+
+          /* ← div yopildi */
+        }
+
+        /* ← bottom yopildi */
+      }
+
+      /* ← ✅ right yopildi — bu yetishmayotgan edi */
+    }
+
+    /* ← main yopildi */
+
+    .second {
+      display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; height: 45px; border-top: 1px solid #212329; margin-top: 60px;
+
+      span {
+        font-family: $font; font-size: 14px; font-weight: 400; color: #bebdbd;
+      }
+    }
+
+    /* ← second yopildi */
+  }
+
+  /* ← footer-container yopildi */
+}
+
+/* ← footer yopildi */

@@ -35,9 +35,9 @@
             display: flex; flex-direction: row; align-items: flex-end;
 
             .pagination-box {
-              display: flex; flex-direction: row; align-items: center;
+              display: flex; flex-direction: row; align-items: center; gap: 8px;
 
-              .swiper-pagination-bullet.swiper-pagination {
+              .swiper-pagination-bullet.swiper-pagination-bullet-active {
                 background: #000000;
               }
 
@@ -57,32 +57,32 @@
                 margin-right: 20px; cursor: pointer;
               }
             }
-          }
 
-          .more-box {
-            display: flex; flex-direction: row; align-items: center; cursor: pointer;
+            .more-box {
+              display: flex; flex-direction: row; align-items: center; cursor: pointer;
 
-            span {
-              font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
-            }
-
-            img {
-              width: 16px; height: 16px; margin-left: 10px;
-            }
-          }
-
-          .btn-box {
-            display: flex; flex-direction: row;
-
-            button {
-              border-radius: 6px; font-family: $font; font-size: 14px; font-weight: 500; font-style: normal; line-height: 28px; text-transform: capitalize; color: #ffffff; background: rgba(255, 255, 255, 0.07);
-
-              &:first-child {
-                margin-right: 20px;
+              span {
+                font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; text-transform: capitalize; color: #181a20;
               }
 
-              &.active {
-                border: 1px solid #181a20; font-family: $font; font-size: 14px; font-weight: 500; font-style: normal; line-height: 28px; color: #181a20; background: #fff;
+              img {
+                width: 16px; height: 16px; margin-left: 10px;
+              }
+            }
+
+            .btn-box {
+              display: flex; flex-direction: row;
+
+              button {
+                border-radius: 6px; font-family: $font; font-size: 14px; font-weight: 500; line-height: 28px; text-transform: capitalize; color: #ffffff; background: rgba(255, 255, 255, 0.07);
+
+                &:first-child {
+                  margin-right: 20px;
+                }
+
+                &.active {
+                  border: 1px solid #181a20; font-size: 14px; font-weight: 500; line-height: 28px; color: #181a20; background: #fff;
+                }
               }
             }
           }
@@ -114,19 +114,19 @@
               position: relative; width: 100%; height: 203px; border-radius: 12px 12px 0px 0px; background-size: cover; cursor: pointer;
 
               div {
-                position: absolute; bottom: 12px; left: 12px; padding: 8px 12px; border-radius: 6px; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; color: #181a20; background: #fff;
+                position: absolute; bottom: 12px; left: 12px; padding: 8px 12px; border-radius: 6px; font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; color: #181a20; background: #fff;
               }
             }
 
             .info {
-              display: flex; flex-direction: column; box-sizing: border-box; padding: 20px 22px 17px; border: 1px solid rgba(196, 196, 196, 0.71); border-top: none; border-radius: 0px 0px 12px 12px; background: #fff; box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+              padding: 20px 22px 17px;
 
               .title {
-                overflow: hidden; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; text-overflow: ellipsis; white-space: nowrap; color: #181a20; cursor: pointer;
+                margin-bottom: 6px; font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; text-transform: capitalize; color: #181a20; cursor: pointer;
               }
 
               .desc {
-                overflow: hidden; margin-top: 5px; font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-overflow: ellipsis; white-space: nowrap; color: #717171;
+                overflow: hidden; margin-top: 5px; font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-overflow: ellipsis; white-space: nowrap; color: #717171;
               }
 
               .options {
@@ -140,7 +140,7 @@
                   }
 
                   span {
-                    font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; color: #181a20;
+                    font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; color: #181a20;
                   }
                 }
               }
@@ -149,7 +149,7 @@
                 display: flex; flex-direction: row; justify-content: space-between; align-items: center;
 
                 p {
-                  font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
+                  font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-transform: capitalize; color: #181a20;
                 }
 
                 button {
@@ -160,7 +160,7 @@
                   display: flex; flex-direction: row; align-items: center; gap: 7px;
 
                   .view-cnt {
-                    font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-overflow: ellipsis; color: #717171;
+                    font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-overflow: ellipsis; color: #717171;
                   }
                 }
               }
@@ -169,8 +169,6 @@
         }
       }
     }
-
-    //* ==== *//
 
     .popular-properties {
       display: flex; flex-direction: row; width: 100%; height: 816px; padding: 132px 0px 94px; background: #f6f6f6;
@@ -185,7 +183,7 @@
             display: flex; flex-direction: column;
 
             span {
-              font-family: $font; font-size: 34px; font-weight: 500; font-style: normal; line-height: 150%; letter-spacing: -0.646px; text-transform: capitalize; color: #181a20;
+              font-family: $font; font-size: 34px; font-weight: 500; line-height: 150%; letter-spacing: -0.646px; text-transform: capitalize; color: #181a20;
 
               &.white {
                 color: #ffffff;
@@ -193,7 +191,7 @@
             }
 
             p {
-              font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #181a20;
+              font-family: $font; font-size: 14px; font-weight: 400; line-height: 26px; color: #181a20;
 
               &.white {
                 color: #ffffff;
@@ -204,35 +202,11 @@
           .right {
             display: flex; flex-direction: row; align-items: flex-end;
 
-            .pagination-box {
-              display: flex; flex-direction: row; align-items: center;
-
-              .swiper-pagination-bullet.swiper-pagination-bullet-active {
-                background: #000000;
-              }
-
-              .swiper-trend-next {
-                margin-left: 20px; cursor: pointer;
-              }
-
-              .swiper-trend-prev {
-                margin-right: 20px; cursor: pointer;
-              }
-
-              .swiper-top-next {
-                margin-left: 20px; cursor: pointer;
-              }
-
-              .swiper-top-prev {
-                margin-right: 20px; cursor: pointer;
-              }
-            }
-
             .more-box {
               display: flex; flex-direction: row; align-items: center; cursor: pointer;
 
               span {
-                font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
+                font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; text-transform: capitalize; color: #181a20;
               }
 
               img {
@@ -244,14 +218,14 @@
               display: flex; flex-direction: row;
 
               button {
-                border-radius: 6px; font-family: $font; font-size: 14px; font-weight: 500; font-style: normal; line-height: 28px; text-transform: capitalize; color: #ffffff; background: rgba(255, 255, 255, 0.07);
+                border-radius: 6px; font-family: $font; font-size: 14px; font-weight: 500; line-height: 28px; text-transform: capitalize; color: #ffffff; background: rgba(255, 255, 255, 0.07);
 
                 &:first-child {
                   margin-right: 20px;
                 }
 
                 &.active {
-                  border: 1px solid #181a20; font-family: $font; font-size: 14px; font-weight: 500; font-style: normal; line-height: 28px; color: #181a20; background: #fff;
+                  border: 1px solid #181a20; font-size: 14px; font-weight: 500; line-height: 28px; color: #181a20; background: #fff;
                 }
               }
             }
@@ -270,14 +244,14 @@
           }
 
           .popular-card-box {
-            position: relative; display: flex; flex-direction: column; width: 400px; height: 425px; transition: transform 0.3s, opacity 0.3s;
+            position: relative; display: flex; flex-direction: column; width: 400px; height: 425px; transition: transform 0.3s;
 
             &:hover {
-              opacity: 1; transform: scale(1.05);
+              transform: scale(1.02);
             }
 
             .card-img {
-              position: relative; width: 100%; height: 203px; border-radius: 12px 12px 0px 0px; background-size: cover; cursor: pointer;
+              position: relative; width: 100%; height: 203px; border-radius: 12px 12px 0px 0px; background-position: center; background-size: cover; cursor: pointer;
 
               div.status {
                 position: absolute; top: 20px; left: 20px; display: flex; align-items: center; padding: 6px 34px; border-radius: 6px; background: #eb6753;
@@ -287,12 +261,12 @@
                 }
 
                 span {
-                  margin-left: 5px; font-family: $font; font-size: 12px; font-weight: 600; font-style: normal; line-height: normal; text-transform: uppercase; color: #fff;
+                  margin-left: 5px; font-family: $font; font-size: 12px; font-weight: 600; line-height: normal; text-transform: uppercase; color: #fff;
                 }
               }
 
               div.price {
-                position: absolute; bottom: 20px; left: 20px; padding: 8px 12px; border-radius: 6px; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; color: #181a20; background: #fff;
+                position: absolute; bottom: 20px; left: 20px; padding: 8px 12px; border-radius: 6px; font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; color: #181a20; background: #fff;
               }
             }
 
@@ -300,11 +274,11 @@
               display: flex; flex-direction: column; box-sizing: border-box; padding: 20px 22px 17px; border: 1px solid rgba(196, 196, 196, 0.71); border-top: none; border-radius: 0px 0px 12px 12px; background: #fff; box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
 
               .title {
-                overflow: hidden; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; text-overflow: ellipsis; white-space: nowrap; color: #181a20; cursor: pointer;
+                overflow: hidden; font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; text-transform: capitalize; text-overflow: ellipsis; white-space: nowrap; color: #181a20; cursor: pointer;
               }
 
               .desc {
-                overflow: hidden; margin-top: 5px; font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-overflow: ellipsis; white-space: nowrap; color: #717171;
+                overflow: hidden; margin-top: 5px; font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-overflow: ellipsis; white-space: nowrap; color: #717171;
               }
 
               .options {
@@ -318,7 +292,7 @@
                   }
 
                   span {
-                    font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; color: #181a20;
+                    font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; color: #181a20;
                   }
                 }
               }
@@ -327,7 +301,7 @@
                 display: flex; flex-direction: row; justify-content: space-between; align-items: center;
 
                 p {
-                  font-family: $font; font-size: 13px; font-weight: 500; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
+                  font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-transform: capitalize; color: #181a20;
                 }
 
                 button {
@@ -338,44 +312,43 @@
                   display: flex; flex-direction: row; align-items: center; gap: 7px;
 
                   .view-cnt {
-                    font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-overflow: ellipsis; color: #717171;
+                    font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-overflow: ellipsis; color: #717171;
                   }
                 }
               }
             }
           }
         }
+      }
+    }
 
-        .pagination-box {
-          display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 16px; margin-top: 40px;
+    .advertisement {
+      overflow: hidden; width: 100%; height: 600px;
 
-          .swiper-popular-prev,
-          .swiper-popular-next {
-            color: #181a20; cursor: pointer;
+      .video {
+        width: 100%; height: 100%; object-fit: cover;
+      }
+    }
+
+    .video-frame {
+      position: relative; display: flex; overflow: hidden; flex-direction: row; width: 100%; height: 600px; background: url("/img/banner/video.png") center/cover no-repeat;
+
+      .overlay {
+        position: absolute; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.15); inset: 0;
+
+        .play-btn {
+          display: flex; justify-content: center; align-items: center; width: 70px; height: 70px; border-radius: 50%; background: rgba(255, 255, 255, 0.9); box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); transition: transform 0.3s; cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
           }
 
-          .swiper-popular-pagination {
-            display: flex; flex-direction: row; align-items: center; gap: 6px;
-
-            .swiper-pagination-bullet {
-              width: 8px; height: 8px; background: #c4c4c4; opacity: 1;
-            }
-
-            .swiper-pagination-bullet-active {
-              background: #181a20;
-            }
+          svg {
+            margin-left: 4px; font-size: 36px; color: #181a20;
           }
         }
       }
     }
-
-    //* ==== *//
-
-    .video-frame {
-      width: 100%; height: 678px; background: black; box-shadow: -3px 0px 20px 14px #34343480; transform: perspective(0px);
-    }
-
-    //* ==== *//
 
     .top-properties {
       display: flex; flex-direction: row; width: 100%; height: 697px; padding: 108px 0px 76px;
@@ -390,7 +363,7 @@
             display: flex; flex-direction: column;
 
             span {
-              font-family: $font; font-size: 34px; font-weight: 500; font-style: normal; line-height: 150%; letter-spacing: -0.646px; text-transform: capitalize; color: #181a20;
+              font-family: $font; font-size: 34px; font-weight: 500; line-height: 150%; letter-spacing: -0.646px; text-transform: capitalize; color: #181a20;
 
               &.white {
                 color: #ffffff;
@@ -398,7 +371,7 @@
             }
 
             p {
-              font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #181a20;
+              font-family: $font; font-size: 14px; font-weight: 400; line-height: 26px; color: #181a20;
 
               &.white {
                 color: #ffffff;
@@ -410,7 +383,7 @@
             display: flex; flex-direction: row; align-items: flex-end;
 
             .pagination-box {
-              display: flex; flex-direction: row; align-items: center;
+              display: flex; flex-direction: row; align-items: center; gap: 8px;
 
               .swiper-pagination-bullet.swiper-pagination-bullet-active {
                 background: #000000;
@@ -429,6 +402,10 @@
 
         .card-box {
           position: relative; display: flex; flex-direction: row; margin-top: 64px;
+
+          .empty-list {
+            display: flex; justify-content: center; align-items: center; width: 100%; height: 280px;
+          }
 
           .top-property-swiper {
             display: flex; flex-direction: row; width: 100%; height: 400px;
@@ -449,19 +426,19 @@
               position: relative; width: 100%; height: 203px; border-radius: 12px 12px 0px 0px; background-size: cover; cursor: pointer;
 
               div {
-                position: absolute; bottom: 12px; left: 12px; padding: 8px 12px; border-radius: 6px; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; color: #181a20; background: #fff;
+                position: absolute; bottom: 12px; left: 12px; padding: 8px 12px; border-radius: 6px; font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; color: #181a20; background: #fff;
               }
             }
 
             .info {
-              display: flex; flex-direction: column; box-sizing: border-box; padding: 20px 22px 17px; border: 1px solid rgba(196, 196, 196, 0.71); border-top: none; border-radius: 0px 0px 12px 12px; background: #fff; box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+              padding: 20px 22px 17px;
 
               .title {
-                overflow: hidden; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; text-overflow: ellipsis; white-space: nowrap; color: #181a20; cursor: pointer;
+                margin-bottom: 6px; font-family: $font; font-size: 15px; font-weight: 600; line-height: normal; text-transform: capitalize; color: #181a20; cursor: pointer;
               }
 
               .desc {
-                overflow: hidden; margin-top: 5px; font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-overflow: ellipsis; white-space: nowrap; color: #717171;
+                overflow: hidden; margin-top: 5px; font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-overflow: ellipsis; white-space: nowrap; color: #717171;
               }
 
               .options {
@@ -475,7 +452,7 @@
                   }
 
                   span {
-                    font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; color: #181a20;
+                    font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; color: #181a20;
                   }
                 }
               }
@@ -484,7 +461,7 @@
                 display: flex; flex-direction: row; justify-content: space-between; align-items: center;
 
                 p {
-                  font-family: $font; font-size: 13px; font-weight: 500; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
+                  font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-transform: capitalize; color: #181a20;
                 }
 
                 button {
@@ -495,7 +472,7 @@
                   display: flex; flex-direction: row; align-items: center; gap: 7px;
 
                   .view-cnt {
-                    font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-overflow: ellipsis; color: #717171;
+                    font-family: $font; font-size: 13px; font-weight: 400; line-height: normal; text-overflow: ellipsis; color: #717171;
                   }
                 }
               }
@@ -505,13 +482,11 @@
       }
     }
 
-    //* ==== *//
-
     .top-agents {
-      position: relative; display: flex; flex-direction: row; width: 100%; height: 722px; padding: 153px 0px 135px; background: #f6f6f6;
+      display: flex; flex-direction: row; width: 100%; height: auto; padding: 108px 0px 76px; background: #f6f6f6;
 
       .container {
-        position: relative; flex-direction: column; align-items: center;
+        flex-direction: column;
 
         .info-box {
           display: flex; flex-direction: row; justify-content: space-between; width: 100%;
@@ -520,22 +495,22 @@
             display: flex; flex-direction: column;
 
             span {
-              font-family: $font; font-size: 34px; font-weight: 500; font-style: normal; line-height: 150%; letter-spacing: -0.646px; text-transform: capitalize; color: #181a20;
+              font-family: $font; font-size: 34px; font-weight: 500; line-height: 150%; letter-spacing: -0.646px; text-transform: capitalize; color: #181a20;
             }
 
             p {
-              font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #181a20;
+              font-family: $font; font-size: 14px; font-weight: 400; line-height: 26px; color: #181a20;
             }
           }
 
           .right {
-            display: flex; flex-direction: row; align-items: flex-end;
+            display: flex; align-items: flex-end;
 
             .more-box {
               display: flex; flex-direction: row; align-items: center; cursor: pointer;
 
               span {
-                font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
+                font-family: $font; font-size: 15px; font-weight: 600; text-transform: capitalize; color: #181a20;
               }
 
               img {
@@ -545,45 +520,66 @@
           }
         }
 
-        .wrapper {
-          display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; margin-top: 83px;
+        .card-box {
+          position: relative; display: flex; flex-direction: row; align-items: center; margin-top: 64px;
 
-          .switch-btn {
-            display: flex; justify-content: center; align-items: center; width: 53px; height: 53px; border-radius: 50%; background: #ffffff; filter: drop-shadow(0px 10px 35px rgba(5, 16, 54, 0.1)); cursor: pointer;
+          .empty-list {
+            display: flex; justify-content: center; align-items: center; width: 100%; height: 280px;
+          }
+
+          /* PREV / NEXT tugmalar */
+
+          .swiper-agent-prev,
+          .swiper-agent-next {
+            position: absolute; top: 40%; z-index: 10; display: flex; justify-content: center; align-items: center; width: 44px; height: 44px; border-radius: 50%; background: #ffffff; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); transform: translateY(-50%); cursor: pointer;
 
             svg {
-              width: 14px; height: 14px;
-            }
-
-            &.swiper-agents-next {
-              transform: rotate(180deg);
+              font-size: 16px; color: #181a20;
             }
           }
 
-          .card-wrapper {
-            display: flex; flex-direction: row; width: 1174px; height: 280px;
+          .swiper-agent-prev {
+            left: -22px;
+          }
 
-            .top-agents-swiper {
-              display: flex; flex-direction: row; width: 99.7%; height: 280px;
+          .swiper-agent-next {
+            right: -22px;
+          }
 
-              .top-agents-slide {
-                display: flex; width: auto; height: auto;
+          .top-agent-swiper {
+            display: flex; flex-direction: row; width: 100%; height: 300px;
+
+            .top-agent-slide {
+              display: flex; justify-content: space-between; width: auto; height: auto;
+            }
+          }
+
+          /* AGENT CARD */
+
+          .top-agent-card {
+            display: flex; flex-direction: column; align-items: center; transition: transform 0.3s; cursor: pointer;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+
+            .agent-img {
+              overflow: hidden; width: 170px; height: 170px; border-radius: 50%;
+
+              img {
+                width: 100%; height: 100%; object-fit: cover;
               }
             }
 
-            .top-agent-card {
-              display: flex; flex-direction: column; width: 205px; height: 280px;
+            .agent-info {
+              display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 20px;
 
-              img {
-                width: 209px; height: 209px; border-radius: 50%; cursor: pointer; object-fit: cover;
+              .name {
+                font-family: $font; font-size: 15px; font-weight: 600; text-transform: capitalize; color: #181a20;
               }
 
-              strong {
-                margin-top: 20px; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-align: center; text-transform: capitalize; color: #181a20; cursor: pointer;
-              }
-
-              span {
-                font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; text-align: center; color: #181a20;
+              .type {
+                font-family: $font; font-size: 13px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: #717171;
               }
             }
           }

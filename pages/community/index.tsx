@@ -4,13 +4,13 @@ import { NextPage } from "next";
 import { useState } from "react";
 
 const Community: NextPage = () => {
-  const [title, setTitle] = useState<string>("HELLO");
+  console.log("COMMUNITY COMPONENT - PAGES ROUTER");
+  const [title, setTitle] = useState<string>("hello");
+
   return (
-    <>
-      <div style={{ margin: "20px 0px" }}>
-        <Stack className="container">COMMUNITY</Stack>
-      </div>
-    </>
+    <div style={{ margin: "20px 0" }}>
+      <Stack className="container">COMMUNITY</Stack>
+    </div>
   );
 };
 

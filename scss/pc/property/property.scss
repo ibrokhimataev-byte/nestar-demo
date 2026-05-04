@@ -1,0 +1,241 @@
+#pc-wrap {
+  #property-list-page {
+    padding-bottom: 40px; background: #f6f6f6;
+
+    .container {
+      .right {
+        position: absolute; top: 4%; right: 0; z-index: 2; display: flex; flex-direction: row; align-items: center;
+
+        button {
+          margin-left: 10px; font-family: $font; font-size: 14px; font-weight: bold; font-style: normal; line-height: 26px; color: #181a20;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+
+      .property-page {
+        position: relative; flex-direction: row; gap: 25px; width: 100%; padding-top: 96px;
+
+        .filter-config {
+          width: 339px; height: auto;
+
+          .filter-main {
+            width: 100%; padding: 30px 24px; border-radius: 12px; background: #fff; box-shadow: 0 1px 4px 0 rgba(24, 26, 32, 0.07);
+
+            .find-your-home {
+              position: relative; gap: 10px; width: 100%;
+
+              .property-location {
+                overflow: hidden; gap: 10px; height: 115px; transition: 1s;
+
+                &:hover {
+                  height: 253px;
+                }
+              }
+
+              .title-main {
+                width: 100%; height: 25px; font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; color: #181a20;
+              }
+
+              .title {
+                width: auto; height: auto; font-family: $font; font-size: 14px; font-weight: 600; font-style: normal; line-height: normal; color: #181a20;
+              }
+
+              .input-box {
+                position: relative; flex-direction: row; align-items: center; width: 100%;
+
+                svg {
+                  cursor: pointer;
+                }
+
+                .search-input {
+                  width: 100%; height: 53px; padding-left: 43px; border: 1px solid #ddd; border-radius: 8px; font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #717171; background: #fff; outline: none;
+                }
+
+                img {
+                  position: absolute; top: 18px; left: 15px; width: 18px; height: 17px;
+                }
+
+                .property-checkbox {
+                  width: 16px; height: 15px; border-radius: 12px; margin-right: 10px;
+
+                  svg {
+                    width: 19px;
+                  }
+                }
+              }
+
+              .city-select {
+                width: 100%; height: 49px; padding-left: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #717171; background: #fff; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; cursor: pointer; appearance: none; outline: none;
+              }
+
+              .divider {
+                position: absolute; top: 31px; right: 39px; height: 48px; border-left: 1px solid #ddd;
+              }
+
+              .arrow-down {
+                position: absolute; top: 52px; right: 13px; width: 15px; height: 8px; color: #ddd;
+              }
+
+              .property-type {
+                font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 19px; color: #181a20;
+              }
+
+              .button-group {
+                flex-direction: row; width: 100%; height: 43.998px;
+
+                button {
+                  width: 100%; font-family: $font; font-size: 13px; font-weight: 600; font-style: normal; line-height: normal; text-align: center; color: #181a20;
+                }
+              }
+
+              .square-year-input {
+                flex-direction: row; align-items: center; gap: 10px; width: 100%;
+
+                .central-divider {
+                  width: 22px; border: 1px solid black;
+                }
+
+                input {
+                  width: 100%; height: 49px; padding-left: 15px; border: 1px solid #ddd; border-radius: 8px; background: #fff; outline: none;
+                }
+
+                label {
+                  line-height: 13px;
+                }
+
+                input::placeholder {
+                  font-family: $font; font-size: 14px; font-weight: 400; font-style: normal; line-height: 26px; color: #717171;
+                }
+              }
+            }
+          }
+        }
+
+        .main-config {
+          align-items: center; gap: 109px; width: 936px;
+
+          .list-config {
+            display: flex; flex-direction: row; flex-wrap: wrap; gap: 23px; width: 100%; height: auto;
+
+            .card-config {
+              width: 296px; height: 413px; border-radius: 12px; margin-bottom: 7px; background: #fff; box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+
+              .top {
+                position: relative; width: 100%; height: 240px;
+
+                a {
+                  height: 100%;
+                }
+
+                img {
+                  width: 100%; height: 100%; border-radius: 12px 12px 0 0; object-fit: cover;
+                }
+
+                .top-badge {
+                  position: absolute; top: 20px; left: 16px; display: flex; justify-content: center; align-items: center; width: 80px; height: 30px; padding: 6px 20px; border-radius: 6px; font-family: $font; font-size: 12px; font-weight: 600; font-style: normal; line-height: normal; text-align: center; color: #fff; background: #eb6753; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                  img {
+                    height: 16px;
+                  }
+                }
+
+                .price-box {
+                  position: absolute; bottom: 20px; left: 20px; align-items: center; padding: 8px 15px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 6px; background: #fff;
+
+                  p {
+                    font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; color: #181a20;
+                  }
+                }
+              }
+
+              .bottom {
+                width: 100%; height: 173px; padding: 20px 16px 10px 16px;
+
+                .name-address {
+                  gap: 5px; width: 100%; height: 48px; margin-bottom: 20px;
+
+                  .name {
+                    overflow: hidden; width: 100%; height: 23px;
+
+                    p {
+                      font-family: $font; font-size: 15px; font-weight: 600; font-style: normal; line-height: normal; text-transform: capitalize; color: #181a20;
+                    }
+                  }
+
+                  .address {
+                    overflow: hidden; width: 100%;
+
+                    p {
+                      font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; color: #717171;
+                    }
+                  }
+                }
+
+                .options {
+                  flex-direction: row; gap: 20px; width: 100%; height: 20px; margin-bottom: 10px;
+
+                  .option {
+                    flex-direction: row; align-items: center; gap: 5px;
+
+                    p {
+                      font-family: $font; font-size: 13px; font-weight: 400; font-style: normal; line-height: normal; color: #181a20;
+                    }
+                  }
+                }
+
+                .divider {
+                  width: 100%; height: 1px; margin-bottom: 17px; background: #ddd;
+                }
+
+                .type-buttons {
+                  flex-direction: row; justify-content: space-between; align-items: center; width: 100%;
+
+                  .type {
+                    flex-direction: row; align-items: center; gap: 7px;
+
+                    p {
+                      font-family: $font; font-style: normal; line-height: normal; color: #181a20;
+                    }
+
+                    .disabled-type {
+                      font-family: $font; font-style: normal; line-height: normal; color: rgba(143, 143, 143, 0.54);
+                    }
+                  }
+
+                  .buttons {
+                    flex-direction: row; justify-content: center; align-items: center; width: auto;
+
+                    svg {
+                      width: 24px; height: 24px; cursor: pointer;
+                    }
+
+                    .view-cnt {
+                      font-size: 13px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .pagination-config {
+            align-items: center; gap: 20px; width: 442px; height: 86px;
+
+            .pagination-box {
+              align-items: center; width: 100%;
+            }
+          }
+
+          .total-result {
+            p {
+              font-family: $font; font-size: 24px; font-weight: 275; font-style: normal; line-height: 26px; text-align: center; color: #181a20;
+            }
+          }
+        }
+      }
+    }
+  }
+}
